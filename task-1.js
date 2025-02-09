@@ -1,11 +1,10 @@
 function makeTransaction(quantity, pricePerDroid, customerCredits){
-    let quantity = 1
-    let pricePerDroid = 2
-    let customerCredits = 3
+   const total = quantity * pricePerDroid;
 
-    if(totalPrice){
-        totalPrice = customerCredits - pricePerDroid
-        console.log(`You ordered ${quantity} droids worth <totalPrice> credits!`)
+    if(totalPrice <= customerCredits){
+        console.log(`You ordered ${quantity} droids worth ${totalPrice} credits!`);
+    }else{
+        return `"Insufficient funds!"`;
     }
 }
 console.log(makeTransaction(5, 3000, 23000)); // "You ordered 5 droids worth 15000 credits!"
